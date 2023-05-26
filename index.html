@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Site de Ténis </title>
+    <style>
+        /* Estilos CSS */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+body{
+    background: url(./hero-img_copy.jpg);
+    background-size: cover;
+    
+
+    
+}
+        header {
+            background-color: #463cb5;
+            color: #fff;
+            padding: 5px;
+            text-align: center;
+            
+
+        }
+        
+        
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .gallery img {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            margin: 10px;
+        }
+
+
+figure{
+    margin-left: 85px;
+}
+
+    </style>
+    <script>
+        function exibirAlertaTamanho() {
+            var tamanho = prompt("Bem-vindo às compras no nosso site de ténis!\n\nQual é o tamanho do ténis que você deseja?");
+            if (tamanho !== null && tamanho !== "") {
+                alert("Você selecionou o tamanho " + tamanho);
+                enviarInformacoes(tamanho);
+            }
+        }
+
+        function enviarInformacoes(tamanho) {
+            var cor = prompt("Agora, escolha a cor do ténis que você deseja:");
+            if (cor !== null && cor !== "") {
+                alert("Você selecionou a cor " + cor);
+
+                // Envie as informações por email
+                var mensagem = "Tamanho: " + tamanho + "\nCor: " + cor;
+                var assunto = "Pedido de Ténis ";
+                var destinatario = "seu-email@exemplo.com";
+                var corpoEmail = "mailto:" + destinatario + "?subject=" + encodeURIComponent(assunto) + "&body=" + encodeURIComponent(mensagem);
+                window.location.href = corpoEmail;
+
+                exibirPedidoRecebido();
+            }
+        }
+
+    function exibirPedidoRecebido() {
+        alert("Pedido Recebido! Obrigado por comprar conosco.");
+    
+    }
+    </script>
+</head>
+
+<body onload="exibirAlertaTamanho();">
+    <header>
+        <h1>Meu Site De Ténis Da NIKE</h1>
+        <img src="./10tenis-nike-removebg-preview.png" width="150PX" alt="">
+    
+        <figure>
+            <img src="./FOTO.JPG.jpg" width="100px" alt="">
+            <figcaption>Desenvolvedor Front-End Wanderson de Farias</figcaption>
+        </figure>
+
+        </header>
+
+    <div class="gallery">
+        <img src="./1tenis-nike-laranja-e-branco-.jpg" alt="tenis 1">
+        <img src="./2tenis-nike--removebg-preview.png" alt="tenis 2">
+        <img src="./3tenis-nike-feminin-.png" alt="tenis 3">
+        <img src="./4tenis-nike-removebg-preview.png" alt="tenis 4">
+        
+        
+        <img src="./5tenis-nike-.jpg" alt="tenis 5">
+        <img src="./6tenis-nike-removebg-preview.png" alt="tenis 6">
+        <img src="./7tenis-nike-removebg-preview.png" alt="tenis 7">
+        <img src="./8tenis_nike_-removebg-preview.png" alt="tenis 8">
+        
+        
+        
+        
+        <img src="./9tenis-nike--removebg-preview.png" alt="tenis 9">
+        <img src="./10tenis-nike-removebg-preview.png" alt="tenis 10">
+        <img src="./11tenis-nike-feminino-removebg-preview.png" alt="tenis 11">
+        <img src="./12tenis-nike--removebg-preview.png" alt="tenis 12">
+        <!-- Adicione mais imagens aqui -->
+    </div>
+
+    
+</body>
+
+</html>
